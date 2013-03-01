@@ -1,0 +1,17 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+RewriteRule CleaningService ftpcleaner.php
+RewriteRule CleaningService/ ftpcleaner.php
+
+RewriteRule ListDirectory/(.*) ftpcleaner.php?CFD=./$1
+RewriteRule ListDirectory/(.*)/ ftpcleaner.php?CFD=./$1
+
+RewriteRule CleanDirectory/(.*) ftpcleaner.php?FTP_Dir=./$1
+RewriteRule CleanDirectory/(.*)/ ftpcleaner.php?FTP_Dir=./$1
+
+RewriteRule DeleteFile/(.*) ftpcleaner.php?CD=./$1
+RewriteRule DeleteFile/(.*)/ ftpcleaner.php?CD=./$1
+
+RewriteRule RestoreFile/(.*) ftpcleaner.php?RCD=./$1
+RewriteRule RestoreFile/(.*)/ ftpcleaner.php?RCD=./$1
